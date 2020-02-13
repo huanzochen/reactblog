@@ -6,7 +6,7 @@
       ".tpl": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js"
     },
     "root": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\config.local.js",
     "defaultExtension": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\config.default.js"
   },
   "news": {
@@ -15,7 +15,7 @@
   },
   "middleware": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js",
   "robot": {
-    "ua": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js"
+    "ua": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js"
   },
   "session": {
     "maxAge": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
@@ -44,7 +44,7 @@
       "value": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
+      "enable": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.local.js",
       "maxAge": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "includeSubdomains": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     },
@@ -99,7 +99,7 @@
     "cookieMaxAge": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\config\\config.unittest.js",
+    "type": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\config\\config.local.js",
     "eventSources": {
       "default": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\config\\config.default.js",
       "development": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\config\\config.default.js"
@@ -130,6 +130,13 @@
       "cron": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-multipart\\config\\config.default.js"
     }
   },
+  "development": {
+    "watchDirs": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-development\\config\\config.default.js"
+  },
   "logrotator": {
     "filesRotateByHour": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-logrotator\\config\\config.default.js",
     "hourDelimiter": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-logrotator\\config\\config.default.js",
@@ -152,7 +159,7 @@
     "throwOnUndefined": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
     "trimBlocks": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
     "lstripBlocks": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "cache": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js"
+    "cache": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.local.js"
   },
   "env": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
   "name": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
@@ -223,15 +230,17 @@
     "encoding": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "env": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "level": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.unittest.js",
+    "consoleLevel": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "disableConsoleAfterReady": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "outputJSON": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.unittest.js",
+    "buffer": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "appLogName": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "coreLogName": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "agentLogName": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "errorLogName": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
-    "coreLogger": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.local.js"
+    },
     "allowDebugAtProd": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {
