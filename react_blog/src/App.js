@@ -42,7 +42,7 @@ const routes = [
         path: '/',
         component: Homepage,
         exact: true,
-        breadcrumbName: 'Index'
+        breadcrumbName: ''
     },
     {
         path: '/',
