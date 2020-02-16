@@ -3,6 +3,7 @@ import React from 'react';
 
 import Test from './view/Test';
 import Dashboard from './view/Dashboard';
+import Homepage from './view/Homepage';
 
 const RouteFallback = (props) => { 
     console.log('route fallback with location: ', props.location); 
@@ -44,6 +45,12 @@ const routes = [
         component: Test,
         exact: true,
         breadcrumbName: ''
+    },
+    {
+      path: '/homepage',
+      component: Homepage,
+      exact: true,
+      breadcrumbName: ''
     },
     {
       path: '/dashboard',
