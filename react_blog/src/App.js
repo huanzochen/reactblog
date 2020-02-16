@@ -1,7 +1,8 @@
 import { BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import React from 'react';
 
-import Homepage from './view/Homepage';
+import Test from './view/Test';
+import Dashboard from './view/Dashboard';
 
 const RouteFallback = (props) => { 
     console.log('route fallback with location: ', props.location); 
@@ -40,9 +41,15 @@ export default class App extends React.Component {
 const routes = [
     {
         path: '/',
-        component: Homepage,
+        component: Test,
         exact: true,
         breadcrumbName: ''
+    },
+    {
+      path: '/dashboard',
+      component: Dashboard,
+      exact: true,
+      breadcrumbName: 'Dashboard'
     },
     {
         path: '/',
