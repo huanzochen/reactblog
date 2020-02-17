@@ -132,7 +132,7 @@ const Homepage = () => {
                 </div>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    {['文章列表', '我的文章', '新增文章'].map((text, index) => (
                     <ListItem button key={text}>
                         <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                         <ListItemText primary={text} />
@@ -161,6 +161,7 @@ const Homepage = () => {
                    1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
                    1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
                    1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
+                   文章內容放置處
                 </Typography >    
 
             </main>
