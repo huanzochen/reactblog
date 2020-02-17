@@ -42,13 +42,13 @@ export default class App extends React.Component {
 const routes = [
     {
         path: '/',
-        component: Test,
+        component: Homepage,
         exact: true,
         breadcrumbName: ''
     },
     {
-      path: '/homepage',
-      component: Homepage,
+      path: '/test',
+      component: Test,
       exact: true,
       breadcrumbName: ''
     },
