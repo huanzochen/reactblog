@@ -17,6 +17,7 @@ import { IconButton } from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import Articlelist from '../component/article/Articlelist';
 
 const drawerWidth = 240;
 
@@ -163,6 +164,7 @@ const Homepage = () => {
                    1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
                    文章內容放置處
                 </Typography >    
+                <Articlelist></Articlelist>
 
             </main>
         </div>
