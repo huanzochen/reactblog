@@ -1,5 +1,5 @@
 import React from 'react';
-import { VisibilityFilters, SET_VISIBILITY_FILTER, ADD_TODO, TOGGLE_TODO} from '../../actions'
+import { VisibilityFilters, SET_VISIBILITY_FILTER, ADD_TODO, TOGGLE_TODO} from './actions'
 import { combineReducers } from 'redux'
 
 const initialState = {
