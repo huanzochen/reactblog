@@ -18,9 +18,36 @@ exports.middleware = [
 ];
 
 // robot's configurations
-exports.robot ={
+exports.robot = {
     ua: [
         /curl/i,
         /Baiduspider/i,
     ],
+};
+
+// 添加 mysql 配置
+exports.mysql = {
+    // 單數據庫信息配置
+    client: {
+        // host 
+        host: 'momoweb.hopto.me',
+        // 端口號
+        port: '3306',
+        // 用户名
+        user: 'api',
+        // 密码
+        password: 'CHG_challenge112',
+        // 数据库名
+        database: 'blog',
+    },
+    // 是否加載到app 上, 默認開啟
+    app: true,
+    // 是否加載到agent 上, 默認關閉
+    agent: false,
+}
+
+exports.security = {
+    csrf: {
+      enable: false,
+    },
 };

@@ -1,34 +1,40 @@
 {
-  "keys": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js",
+  "keys": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
   "view": {
-    "defaultViewEngine": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js",
+    "defaultViewEngine": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
     "mapping": {
-      ".tpl": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js"
+      ".tpl": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js"
     },
     "root": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\config.default.js",
     "cache": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\config.local.js",
     "defaultExtension": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\config.default.js"
   },
   "news": {
-    "pageSize": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js",
-    "serverUrl": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js"
+    "pageSize": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
+    "serverUrl": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js"
   },
-  "middleware": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js",
+  "middleware": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
   "robot": {
     "ua": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js"
   },
-  "session": {
-    "maxAge": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js"
+  "mysql": {
+    "client": {
+      "host": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
+      "port": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
+      "user": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
+      "password": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
+      "database": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js"
+    },
+    "app": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
+    "agent": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.local.js",
+    "default": {
+      "database": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-mysql\\config\\config.default.js",
+      "connectionLimit": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-mysql\\config\\config.default.js"
+    }
   },
   "security": {
-    "domainWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-    "protocolWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
     "csrf": {
-      "enable": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
+      "enable": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js",
       "type": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "ignoreJSON": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "useSession": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
@@ -39,6 +45,9 @@
       "queryName": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "refererWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     },
+    "domainWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {
       "enable": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "value": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
@@ -76,6 +85,12 @@
       "ipBlackList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "checkAddress": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     }
+  },
+  "session": {
+    "maxAge": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
     "shtml": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
@@ -184,6 +199,7 @@
     "license": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "dependencies": {
       "egg": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
+      "egg-mysql": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "egg-view-nunjucks": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "moment": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\config.default.js"
     },
