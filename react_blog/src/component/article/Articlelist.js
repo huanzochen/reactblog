@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { addWord } from '../../actions/index'
+import { addWord, fetchArticle } from '../../actions/index'
 
 let Articlelist = ({ dispatch }) => {
     let input;
@@ -16,6 +16,9 @@ let Articlelist = ({ dispatch }) => {
                     console.log("tpe");
                     console.log(input.value);
                     dispatch(addWord(input.value))
+                    dispatch(fetchArticle('articlelist')).then(() => {
+                        console.log("fetch 完 Article囉")
+                    })
                 }
                 input.value = ''
             }}
@@ -36,6 +39,7 @@ let Articlelist = ({ dispatch }) => {
 
 }
 Articlelist = connect()(Articlelist)
+
 
 
 export default Articlelist;

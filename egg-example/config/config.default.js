@@ -51,3 +51,10 @@ exports.security = {
       enable: false,
     },
 };
+
+exports.cors = {
+    origin:'*',
+    credentials: true,
+    allowHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+};
