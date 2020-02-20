@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch'
+import webhookURL from '../util/config';
 
 /*
 * action type
@@ -125,7 +126,7 @@ export function fetchPosts(subreddit) {
 export function fetchArticle(article) {
     return function (dispatch) {
         dispatch(getArticleRequest(article))
-        return fetch(`http://localhost:443/api/article`)
+        return fetch( webhookURL.url + `/api/article`)
         .then(response => response.json())
         .then(json => {
             console.log("json");
