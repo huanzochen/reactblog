@@ -107,10 +107,10 @@ export function fetchPosts(subreddit) {
           // 我們可以 dispatch 許多次！
           // 在這裡，我們用 API 呼叫的結果來更新應用程式的 state。
           console.log("json");
-          console.log(json);
+          //console.log(json);
           json.data.children.map(child => {
             console.log('child.data');
-            console.log(child.data);
+            //console.log(child.data);
             })
           dispatch(getRedditSuccess(subreddit, json))
         })
@@ -130,10 +130,10 @@ export function fetchArticle(article) {
         .then(response => response.json())
         .then(json => {
             console.log("json");
-            console.log(json);
+            //console.log(json);
             json.map(child => {
                 console.log('child');
-                console.log(child);
+                //console.log(child);
             })
             dispatch(getArticleSuccess(article, json))
         })

@@ -28,6 +28,15 @@ store.dispatch(fetchPosts('reactjs')).then(() => {
     console.log('fetch 完囉')
     //console.log(store.getState())
 })
+store.dispatch(fetchArticle('articlelist')).then(() => {
+    console.log("fetch 完 Article囉")
+    ReactDOM.render(
+        <Provider store={store}>
+            <App />
+        </Provider>,
+        document.getElementById('root')
+    );
+})
 ///////
 
 /*
@@ -40,12 +49,7 @@ store.dispatch(fetchArticle('articlelist')).then(() => {
 
 
 
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
-);
+
 
 
   

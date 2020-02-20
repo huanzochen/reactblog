@@ -87,27 +87,27 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-session\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-security\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-jsonp\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-onerror\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-i18n\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-watcher\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-schedule\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-multipart\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-logrotator\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-static\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-view\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-mysql\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-cors\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\locales",
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\config\\locales"
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-jsonp\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-onerror\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-i18n\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-schedule\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-multipart\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-logrotator\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-static\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-mysql\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-cors\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -118,8 +118,8 @@
     "watcher": {
       "type": "default",
       "eventSources": {
-        "default": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -142,7 +142,7 @@
       "files": 10,
       "fileExtensions": [],
       "whitelist": null,
-      "tmpdir": "C:\\Users\\huang\\AppData\\Local\\Temp\\egg-multipart-tmp\\egg-example",
+      "tmpdir": "C:\\Users\\VIP\\AppData\\Local\\Temp\\egg-multipart-tmp\\egg-example",
       "cleanSchedule": {
         "cron": "0 30 4 * * *"
       }
@@ -158,7 +158,7 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\app\\public",
+      "dir": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": true,
@@ -167,7 +167,7 @@
     },
     "view": {
       "root": [
-        "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\app\\view"
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\app\\view"
       ],
       "cache": true,
       "defaultExtension": ".html",
@@ -241,9 +241,9 @@
         "egg-mock": "^3.25.1"
       }
     },
-    "baseDir": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example",
-    "HOME": "C:\\Users\\huang",
-    "rundir": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\run",
+    "baseDir": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example",
+    "HOME": "C:\\Users\\VIP",
+    "rundir": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -275,7 +275,7 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "C:\\Users\\huang\\logs\\egg-example",
+      "dir": "C:\\Users\\VIP\\logs\\egg-example",
       "encoding": "utf8",
       "env": "prod",
       "level": "INFO",
@@ -378,8 +378,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-session",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -391,8 +391,8 @@
         "session"
       ],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-security",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security",
       "version": "2.7.1"
     },
     "jsonp": {
@@ -404,8 +404,8 @@
         "security"
       ],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-jsonp",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -417,8 +417,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-onerror",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -428,8 +428,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-i18n",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -439,8 +439,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-watcher",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -450,8 +450,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-schedule",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -463,8 +463,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-multipart",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-multipart",
       "version": "2.10.1"
     },
     "logrotator": {
@@ -476,8 +476,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-logrotator",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -487,8 +487,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-static",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -498,8 +498,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-view",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view",
       "version": "2.1.2"
     },
     "nunjucks": {
@@ -512,8 +512,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view-nunjucks",
       "version": "2.2.0"
     },
     "mysql": {
@@ -523,8 +523,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-mysql",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-mysql",
       "version": "3.0.0"
     },
     "cors": {
@@ -534,8 +534,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\config\\plugin.js",
-      "path": "C:\\Users\\huang\\Desktop\\wavenet\\reactblog\\egg-example\\node_modules\\egg-cors",
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-cors",
       "version": "2.2.3"
     }
   }
