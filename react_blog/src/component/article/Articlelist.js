@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import clsx from "clsx";
 import {    
     Table,
     TableCell,
@@ -9,7 +10,8 @@ import {
     TableBody,
     Typography,
     Checkbox,
-    Avatar
+    Avatar,
+    Card
 } from "@material-ui/core";
 import moment from 'moment';
 
@@ -17,7 +19,7 @@ import { addWord, fetchArticle } from '../../actions/index'
 import { getInitials } from '../../example_userlist/helpers';
 
 let Articlelist = ( props ) => {
-    const { users } = props;
+    const { className, users, ...rest } = props;
     const useStyles = makeStyles( (theme) => ({
         inner: {
             minWidth: 1050
@@ -115,42 +117,44 @@ let Articlelist = ( props ) => {
             </form>
 
             
-
+            <Card
+                {...rest}
+                className={clsx(classes.root)}
+            >
             <div className={classes.inner}>
                 <Table>
                 <TableHead>
                     <TableRow>
                     <TableCell padding="checkbox">
                         <Checkbox
-                        checked={selectedUsers.length === users.length}
+                        checked={selectedUsers.length === props.ownProps.postByArticle.articlelist.items.length}
                         color="primary"
                         indeterminate={
                             selectedUsers.length > 0 &&
-                            selectedUsers.length < users.length
+                            selectedUsers.length < props.ownProps.postByArticle.articlelist.items.length
                         }
                         onChange={handleSelectAll}
                         />
                     </TableCell>
-                    <TableCell>Name</TableCell>
-                    <TableCell>Email</TableCell>
-                    <TableCell>Location</TableCell>
-                    <TableCell>Phone</TableCell>
-                    <TableCell>Registration date</TableCell>
+                    <TableCell>創作者</TableCell>
+                    <TableCell>標題</TableCell>
+                    <TableCell>文章內容</TableCell>
+                    <TableCell>創建時間</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {users.slice(0, rowsPerPage).map(user => (
+                    {props.ownProps.postByArticle.articlelist.items.slice(0, rowsPerPage).map(article => (
                     <TableRow
                         className={classes.tableRow}
                         hover
-                        key={user.id}
-                        selected={selectedUsers.indexOf(user.id) !== -1}
+                        key={article.id}
+                        selected={selectedUsers.indexOf(article.id) !== -1}
                     >
                         <TableCell padding="checkbox">
                         <Checkbox
-                            checked={selectedUsers.indexOf(user.id) !== -1}
+                            checked={selectedUsers.indexOf(article.id) !== -1}
                             color="primary"
-                            onChange={event => handleSelectOne(event, user.id)}
+                            onChange={event => handleSelectOne(event, article.id)}
                             value="true"
                         />
                         </TableCell>
@@ -158,31 +162,30 @@ let Articlelist = ( props ) => {
                         <div className={classes.nameContainer}>
                             <Avatar
                             className={classes.avatar}
-                            src={user.avatarUrl}
+                            src={article.act_name}
                             >
-                            {getInitials(user.name)}
+                            {getInitials(article.act_name)}
                             </Avatar>
-                            <Typography variant="body1">{user.name}</Typography>
+                            <Typography variant="body1">{article.act_name}</Typography>
                         </div>
                         </TableCell>
-                        <TableCell>{user.email}</TableCell>
-                        <TableCell>
-                        {user.address.city}, {user.address.state},{' '}
-                        {user.address.country}
-                        </TableCell>
-                        <TableCell>{user.phone}</TableCell>
-                        <TableCell>
-                        {moment(user.createdAt).format('DD/MM/YYYY')}
-                        </TableCell>
+                        <TableCell>{article.title}</TableCell>
+                        <TableCell>{article.content.slice(0,30) + '...'}</TableCell>
+                        <TableCell>{article.create_time}</TableCell>
                     </TableRow>
                     ))}
                 </TableBody>
                 </Table>
             </div>
+            
+            </Card>
+
+
+
             <p>{props.ownProps.postByArticle.articlelist.items[0].content}</p>
             {
             props.ownProps.postByArticle.articlelist.items.map((articles, index) => {
-                return (<p> {articles.content} </p>);
+                return (<p key={index}> {articles.content} </p>);
             })
             }
         </div>
