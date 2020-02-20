@@ -18,10 +18,10 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from '../dashboard/listItems';
-import Chart from '../dashboard/Chart';
-import Deposits from '../dashboard/Deposits';
-import Orders from '../dashboard/Orders';
+import { mainListItems, secondaryListItems } from '../example_dashboard/listItems';
+import Chart from '../example_dashboard/Chart';
+import Deposits from '../example_dashboard/Deposits';
+import Orders from '../example_dashboard/Orders';
 
 function Copyright() {
   return (

@@ -4,6 +4,7 @@ import React from 'react';
 import Test from './view/Test';
 import Dashboard from './view/Dashboard';
 import Homepage from './view/Homepage';
+import mockData from './example_userlist/data';
 
 const RouteFallback = (props) => { 
     console.log('route fallback with location: ', props.location); 
@@ -28,6 +29,7 @@ export default class App extends React.Component {
                   exact={exact} 
                   render={(routeProps) => (
                     <route.component routes={routes} {...routeProps}
+                    users={mockData} 
                     />
                   )} />
                 )

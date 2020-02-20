@@ -1,22 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from "clsx";
+import moment from 'moment';
+import PropTypes from 'prop-types';
+import { getInitials } from '../example_userlist/helpers';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Drawer from '@material-ui/core/Drawer';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import {
+    AppBar,
+    Toolbar,
+    IconButton,
+    ListItem,
+    ListItemText,
+    ListItemIcon,
+    Divider,
+    List,
+    Drawer,
+    Typography,
+    CssBaseline,
+    Table,
+    TableCell,
+    TableHead,
+    TableRow,
+    TableBody,
+    Checkbox,
+    Avatar,
+
+} from "@material-ui/core";
+
+// Icons
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from "@material-ui/icons/Menu";
-import { IconButton } from '@material-ui/core';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
+
+
 import Articlelist from '../component/article/Articlelist';
 
 const drawerWidth = 240;
@@ -74,8 +91,20 @@ const useStyles = makeStyles( (theme) => ({
     },
     hide: {
         display: 'none'
+    },
+    inner: {
+        minWidth: 1050
+    },
+    nameContainer: {
+        display: 'flex',
+        alignItems: 'center'
+    },
+    avatar: {
+        marginRight: theme.spacing(2)
+    },
+    actions: {
+        justifyContent: 'flex-end'
     }
-    
 })
 
 );
@@ -83,7 +112,9 @@ const useStyles = makeStyles( (theme) => ({
 
 
 
-const Homepage = () => {
+const Homepage = (props) => {
+    const { users } = props;
+
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
     const handleDrawerClose = () => {
@@ -91,6 +122,52 @@ const Homepage = () => {
     };
     const handleDrawerOpen = () => {
         setOpen(true);
+    };
+
+    
+    const [selectedUsers, setSelectedUsers] = useState([]);
+    const [rowsPerPage, setRowsPerPage] = useState(10);
+    const [page, setPage] = useState(0);
+    const handleSelectAll = event => {
+        const { users } = props;
+    
+        let selectedUsers;
+    
+        if (event.target.checked) {
+          selectedUsers = users.map(user => user.id);
+        } else {
+          selectedUsers = [];
+        }
+    
+        setSelectedUsers(selectedUsers);
+    };
+
+    const handleSelectOne = (event, id) => {
+        const selectedIndex = selectedUsers.indexOf(id);
+        let newSelectedUsers = [];
+    
+        if (selectedIndex === -1) {
+          newSelectedUsers = newSelectedUsers.concat(selectedUsers, id);
+        } else if (selectedIndex === 0) {
+          newSelectedUsers = newSelectedUsers.concat(selectedUsers.slice(1));
+        } else if (selectedIndex === selectedUsers.length - 1) {
+          newSelectedUsers = newSelectedUsers.concat(selectedUsers.slice(0, -1));
+        } else if (selectedIndex > 0) {
+          newSelectedUsers = newSelectedUsers.concat(
+            selectedUsers.slice(0, selectedIndex),
+            selectedUsers.slice(selectedIndex + 1)
+          );
+        }
+    
+        setSelectedUsers(newSelectedUsers);
+    };
+
+    const handlePageChange = (event, page) => {
+        setPage(page);
+    };
+    
+    const handleRowsPerPageChange = event => {
+        setRowsPerPage(event.target.value);
     };
 
     return (
@@ -165,15 +242,80 @@ const Homepage = () => {
                    文章內容放置處
                 </Typography >    
                 <Articlelist></Articlelist>
+                <div className={classes.inner}>
+                    <Table>
+                    <TableHead>
+                        <TableRow>
+                        <TableCell padding="checkbox">
+                            <Checkbox
+                            checked={selectedUsers.length === users.length}
+                            color="primary"
+                            indeterminate={
+                                selectedUsers.length > 0 &&
+                                selectedUsers.length < users.length
+                            }
+                            onChange={handleSelectAll}
+                            />
+                        </TableCell>
+                        <TableCell>Name</TableCell>
+                        <TableCell>Email</TableCell>
+                        <TableCell>Location</TableCell>
+                        <TableCell>Phone</TableCell>
+                        <TableCell>Registration date</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {users.slice(0, rowsPerPage).map(user => (
+                        <TableRow
+                            className={classes.tableRow}
+                            hover
+                            key={user.id}
+                            selected={selectedUsers.indexOf(user.id) !== -1}
+                        >
+                            <TableCell padding="checkbox">
+                            <Checkbox
+                                checked={selectedUsers.indexOf(user.id) !== -1}
+                                color="primary"
+                                onChange={event => handleSelectOne(event, user.id)}
+                                value="true"
+                            />
+                            </TableCell>
+                            <TableCell>
+                            <div className={classes.nameContainer}>
+                                <Avatar
+                                className={classes.avatar}
+                                src={user.avatarUrl}
+                                >
+                                {getInitials(user.name)}
+                                </Avatar>
+                                <Typography variant="body1">{user.name}</Typography>
+                            </div>
+                            </TableCell>
+                            <TableCell>{user.email}</TableCell>
+                            <TableCell>
+                            {user.address.city}, {user.address.state},{' '}
+                            {user.address.country}
+                            </TableCell>
+                            <TableCell>{user.phone}</TableCell>
+                            <TableCell>
+                            {moment(user.createdAt).format('DD/MM/YYYY')}
+                            </TableCell>
+                        </TableRow>
+                        ))}
+                    </TableBody>
+                    </Table>
+                </div>
 
             </main>
         </div>
-
-
     );
 
 }
 
+Homepage.propTypes = {
+    className: PropTypes.string,
+    users: PropTypes.array.isRequired
+};
 
 
 export default Homepage;

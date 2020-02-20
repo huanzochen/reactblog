@@ -19,6 +19,7 @@ let Articlelist = ({ dispatch }) => {
                     dispatch(fetchArticle('articlelist')).then(() => {
                         console.log("fetch 完 Article囉")
                     })
+                    console.log(this.props);
                 }
                 input.value = ''
             }}
@@ -38,7 +39,17 @@ let Articlelist = ({ dispatch }) => {
 
 
 }
-Articlelist = connect()(Articlelist)
+
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+      ownProps : ownProps = state
+    }
+}
+
+
+
+Articlelist = connect(mapStateToProps)(Articlelist)
 
 
 
