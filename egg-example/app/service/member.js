@@ -10,6 +10,15 @@ class MemberService extends Service {
         const hash = crypto.createHash('sha256');
         hash.update((hash.update(ctx.request.body.password) + 'edwardsekaino.1'));
         
+        console.log(memberInDB);
+        console.log('login');
+        ctx.login(memberInDB[0].act_name);
+        console.log('currentuser');
+        console.log(ctx.user);
+        console.log('isAuthenticated_測試');
+        console.log(ctx.isAuthenticated());
+
+
         if ( memberInDB.length > 0){
             ctx.body = hash.digest('hex') === memberInDB[0].pwd ? true : false;
         }
