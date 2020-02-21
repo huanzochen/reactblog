@@ -43,12 +43,10 @@ let Articlelist = ( props ) => {
     const [rowsPerPage, setRowsPerPage] = useState(10);
     const [page, setPage] = useState(0);
     const handleSelectAll = event => {
-        const { users } = props;
-    
         let selectedUsers;
     
         if (event.target.checked) {
-          selectedUsers = users.map(user => user.id);
+          selectedUsers = props.ownprops.postByArticle.articlelist.items.map(article => article.id);
         } else {
           selectedUsers = [];
         }
@@ -94,19 +92,12 @@ let Articlelist = ( props ) => {
                 else {
                     console.log("tpe");
                     console.log(input.value);
-                    //dispatch(addWord(input.value))
-                    //dispatch(fetchArticle('articlelist')).then(() => {
-                    //    console.log("fetch 完 Article囉")
-                    // })
                     console.log("this.props");
-                    console.log(props.ownProps.postByArticle.articlelist.items[0].content);
-                    //console.log(ownProps);
-                    //console.log(ownProps.postByArticle.articlelist.items[0].content);
+                    console.log(props.ownprops.postByArticle.articlelist.items[0].content);
                 }
                 input.value = ''
             }}
             >
-            <h1> test </h1>
             <input ref={node => {
                 input = node
             }}
@@ -127,23 +118,23 @@ let Articlelist = ( props ) => {
                     <TableRow>
                     <TableCell padding="checkbox">
                         <Checkbox
-                        checked={selectedUsers.length === props.ownProps.postByArticle.articlelist.items.length}
+                        checked={selectedUsers.length === props.ownprops.postByArticle.articlelist.items.length}
                         color="primary"
                         indeterminate={
                             selectedUsers.length > 0 &&
-                            selectedUsers.length < props.ownProps.postByArticle.articlelist.items.length
+                            selectedUsers.length < props.ownprops.postByArticle.articlelist.items.length
                         }
                         onChange={handleSelectAll}
                         />
                     </TableCell>
-                    <TableCell>創作者</TableCell>
+                    <TableCell>作者</TableCell>
                     <TableCell>標題</TableCell>
                     <TableCell>文章內容</TableCell>
                     <TableCell>創建時間</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.ownProps.postByArticle.articlelist.items.slice(0, rowsPerPage).map(article => (
+                    {props.ownprops.postByArticle.articlelist.items.slice(0, rowsPerPage).map(article => (
                     <TableRow
                         className={classes.tableRow}
                         hover
@@ -180,14 +171,6 @@ let Articlelist = ( props ) => {
             
             </Card>
 
-
-
-            <p>{props.ownProps.postByArticle.articlelist.items[0].content}</p>
-            {
-            props.ownProps.postByArticle.articlelist.items.map((articles, index) => {
-                return (<p key={index}> {articles.content} </p>);
-            })
-            }
         </div>
     );    
 
@@ -196,15 +179,17 @@ let Articlelist = ( props ) => {
 }
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownprops) => {
     return {
-      ownProps : ownProps = state
+      ownprops : ownprops = state
     }
+}
+const mapDispatchToProps = (dispatch, ownprops) => {
+    return {}
 }
 
 
-
-Articlelist = connect(mapStateToProps)(Articlelist)
+Articlelist = connect(mapStateToProps, mapDispatchToProps)(Articlelist)
 
 
 

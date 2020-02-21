@@ -152,7 +152,7 @@ const Homepage = (props) => {
                 </List>
                 <Divider />
                 <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                    {['註冊', '登入'].map((text, index) => (
                     <ListItem button key={text}>
                         <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                         <ListItemText primary={text} />
@@ -168,12 +168,6 @@ const Homepage = (props) => {
                 }
             >
                 <div className={classes.drawerHeader} />
-                <Typography paragraph>
-                   1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
-                   1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
-                   1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
-                   文章內容放置處
-                </Typography >    
                 <Articlelist users={mockData} ></Articlelist>
 
 
