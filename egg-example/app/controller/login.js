@@ -4,7 +4,8 @@ class EggController extends Controller {
     async login() {
         const { ctx } = this;
         //ctx.body = `body: ${JSON.stringify(ctx.request.body)}`;
-        ctx.body = ctx.request.body.username;
+
+        const islogin = await this.ctx.service.member.validate();
     };
 }
 

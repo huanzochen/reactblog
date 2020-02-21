@@ -100,6 +100,7 @@
         "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\config\\locales",
         "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-schedule\\config\\locales",
         "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-multipart\\config\\locales",
+        "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-development\\config\\locales",
         "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-logrotator\\config\\locales",
         "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-static\\config\\locales",
         "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-view\\config\\locales",
@@ -116,7 +117,7 @@
       "functionName": "__"
     },
     "watcher": {
-      "type": "default",
+      "type": "development",
       "eventSources": {
         "default": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\lib\\event-sources\\default",
         "development": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-watcher\\lib\\event-sources\\development"
@@ -147,6 +148,13 @@
         "cron": "0 30 4 * * *"
       }
     },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false
+    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -161,15 +169,14 @@
       "dir": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\app\\public",
       "dynamic": true,
       "preload": false,
-      "buffer": true,
-      "maxFiles": 1000,
-      "maxAge": 31536000
+      "buffer": false,
+      "maxFiles": 1000
     },
     "view": {
       "root": [
         "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\app\\view"
       ],
-      "cache": true,
+      "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "nunjucks",
       "mapping": {
@@ -181,7 +188,7 @@
       "throwOnUndefined": false,
       "trimBlocks": false,
       "lstripBlocks": false,
-      "cache": true
+      "cache": false
     },
     "mysql": {
       "default": {
@@ -204,7 +211,7 @@
       "allowHeaders": "Origin, X-Requested-With, Content-Type, Accept",
       "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
     },
-    "env": "prod",
+    "env": "local",
     "name": "egg-example",
     "keys": "<String len: 3>",
     "cookies": {},
@@ -221,7 +228,7 @@
       "main": "index.js",
       "scripts": {
         "test": "egg-bin test",
-        "dev": "egg-bin dev",
+        "dev": "egg-bin dev --port=7777",
         "cov": "egg-bin cov",
         "start": "egg-scripts start --port=7777 --title=egg-server-showcase",
         "stop": "egg-scripts stop --port=7777 --title=egg-server-showcase"
@@ -275,19 +282,21 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "C:\\Users\\VIP\\logs\\egg-example",
+      "dir": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\logs\\egg-example",
       "encoding": "utf8",
-      "env": "prod",
+      "env": "local",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": true,
+      "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "egg-example-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {},
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
       "allowDebugAtProd": false,
       "type": "application"
     },
@@ -325,7 +334,8 @@
       "overrideMethod",
       "session",
       "securities",
-      "i18n"
+      "i18n",
+      "eggLoaderTrace"
     ],
     "workerStartTimeout": 600000,
     "serverTimeout": null,
@@ -466,6 +476,21 @@
       "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
       "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-multipart",
       "version": "2.10.1"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-development",
+      "version": "2.4.3"
     },
     "logrotator": {
       "enable": true,

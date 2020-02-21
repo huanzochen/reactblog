@@ -24,6 +24,11 @@ import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from "@material-ui/icons/Menu";
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import PeopleIcon from '@material-ui/icons/People';
+import GroupAddIcon from '@material-ui/icons/GroupAdd';
+import ListIcon from '@material-ui/icons/List';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
 
 
 import Articlelist from '../component/article/Articlelist';
@@ -143,21 +148,29 @@ const Homepage = (props) => {
                 </div>
                 <Divider />
                 <List>
-                    {['文章列表', '我的文章', '新增文章'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
+                    <ListItem button key={'文章列表'}>
+                        <ListItemIcon> <ListIcon /> </ListItemIcon>
+                        <ListItemText primary={'文章列表'} />
                     </ListItem>
-                    ))}
+                    <ListItem button key={'我的文章'}>
+                        <ListItemIcon> <FavoriteBorderIcon />  </ListItemIcon>
+                        <ListItemText primary={'我的文章'} />
+                    </ListItem>
+                    <ListItem button key={'新增文章'}>
+                        <ListItemIcon> <LibraryAddIcon /> </ListItemIcon>
+                        <ListItemText primary={'新增文章'} />
+                    </ListItem>
                 </List>
                 <Divider />
                 <List>
-                    {['註冊', '登入'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
+                    <ListItem button key={'註冊'}>
+                        <ListItemIcon> <GroupAddIcon /> </ListItemIcon>
+                        <ListItemText primary={'註冊'} />
                     </ListItem>
-                    ))}
+                    <ListItem button key={'登入'}>
+                        <ListItemIcon> <PeopleIcon /> </ListItemIcon>
+                        <ListItemText primary={'登入'} />
+                    </ListItem>
                 </List>
             </Drawer>
             <main

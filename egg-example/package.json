@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "egg-bin test",
-    "dev": "egg-bin dev",
+    "dev": "egg-bin dev --port=7777",
     "cov": "egg-bin cov",
     "start": "egg-scripts start --port=7777 --title=egg-server-showcase",
     "stop": "egg-scripts stop --port=7777 --title=egg-server-showcase"
