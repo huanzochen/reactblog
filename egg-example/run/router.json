@@ -93,8 +93,21 @@
       "POST"
     ],
     "paramNames": [],
-    "path": "/api/login",
-    "regexp": "/^\\/api\\/login(?:\\/(?=$))?$/",
+    "path": "/api/login/login",
+    "regexp": "/^\\/api\\/login\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/login/islogin",
+    "regexp": "/^\\/api\\/login\\/islogin(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

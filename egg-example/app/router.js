@@ -11,5 +11,6 @@ module.exports = app => {
     router.get('/api/article/:username', controller.blog.getArticle)
 
     // 驗證登入
-    router.post('/api/login', controller.login.login)
+    router.post('/api/login/login', controller.login.login)
+    router.get('/api/login/islogin', controller.login.islogin)
 };

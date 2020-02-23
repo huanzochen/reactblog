@@ -4,6 +4,7 @@ import React from 'react';
 import Test from './view/Test';
 import Dashboard from './view/Dashboard';
 import Homepage from './view/Homepage';
+import Signin from './view/Signin';
 
 
 const RouteFallback = (props) => { 
@@ -58,6 +59,12 @@ const routes = [
       component: Dashboard,
       exact: true,
       breadcrumbName: 'Dashboard'
+    },
+    {
+      path: '/Signin',
+      component: Signin,
+      exact: true,
+      breadcrumbName: 'Signin'
     },
     {
         path: '/',

@@ -7,6 +7,10 @@ class EggController extends Controller {
 
         const islogin = await this.ctx.service.member.validate();
     };
+    async islogin() {
+        const { ctx } = this;
+        const islogin = await this.ctx.service.member.validate();
+    }
 }
 
 module.exports = EggController;

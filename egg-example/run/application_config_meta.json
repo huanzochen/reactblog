@@ -45,7 +45,7 @@
       "queryName": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "refererWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     },
-    "domainWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
+    "domainWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\config\\config.default.js",
     "protocolWhiteList": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
     "defaultMiddleware": "C:\\Users\\VIP\\Desktop\\Workspace\\reactblog\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {

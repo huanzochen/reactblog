@@ -13,7 +13,9 @@
       "genid": "<Function v4>"
     },
     "security": {
-      "domainWhiteList": [],
+      "domainWhiteList": [
+        "*"
+      ],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
       "csrf": {
@@ -207,7 +209,7 @@
       }
     },
     "cors": {
-      "origin": "*",
+      "origin": "http://localhost:3000",
       "credentials": true,
       "allowHeaders": "Origin, X-Requested-With, Content-Type, Accept",
       "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
