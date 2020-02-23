@@ -104,4 +104,4 @@ dist
 .tern-port
 
 #egg ignore
-egg-example/run/
+momo-egg/run/
