@@ -6,3 +6,6 @@ https://github.com/reduxjs/redux.git
 
 Day29 - 使用 React-Redux 來管理狀態 [part3]
 https://github.com/yuhsiang/iron-man.git
+
+react-material-dashboard 模板
+https://github.com/devias-io/react-material-dashboard.git

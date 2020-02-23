@@ -50,4 +50,12 @@ exports.security = {
     csrf: {
       enable: false,
     },
+    domainWhiteList: ['*']
+};
+
+exports.cors = {
+    origin:'http://localhost:3000',
+    credentials: true,
+    allowHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
 };

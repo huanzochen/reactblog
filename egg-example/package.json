@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "egg-bin test",
-    "dev": "egg-bin dev",
-    "cov": "egg-bin cov"
+    "dev": "egg-bin dev --port=7777",
+    "cov": "egg-bin cov",
+    "start": "egg-scripts start --port=7777 --title=egg-server-showcase",
+    "stop": "egg-scripts stop --port=7777 --title=egg-server-showcase"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "egg": "^2.26.0",
+    "egg-cors": "^2.2.3",
     "egg-mysql": "^3.0.0",
+    "egg-passport": "^2.1.1",
+    "egg-scripts": "^2.12.0",
     "egg-view-nunjucks": "^2.2.0",
     "moment": "^2.24.0"
   },

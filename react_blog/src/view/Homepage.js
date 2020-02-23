@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from "clsx";
+import PropTypes from 'prop-types';
+import mockData from '../example_userlist/data';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Drawer from '@material-ui/core/Drawer';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import {
+    AppBar,
+    Toolbar,
+    IconButton,
+    ListItem,
+    ListItemText,
+    ListItemIcon,
+    Divider,
+    List,
+    Drawer,
+    Typography,
+    CssBaseline,
+
+} from "@material-ui/core";
+
+// Icons
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from "@material-ui/icons/Menu";
-import { IconButton } from '@material-ui/core';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
+import PeopleIcon from '@material-ui/icons/People';
+import GroupAddIcon from '@material-ui/icons/GroupAdd';
+import ListIcon from '@material-ui/icons/List';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
+
+
 import Articlelist from '../component/article/Articlelist';
 
 const drawerWidth = 240;
@@ -75,7 +89,6 @@ const useStyles = makeStyles( (theme) => ({
     hide: {
         display: 'none'
     }
-    
 })
 
 );
@@ -83,7 +96,8 @@ const useStyles = makeStyles( (theme) => ({
 
 
 
-const Homepage = () => {
+const Homepage = (props) => {
+
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
     const handleDrawerClose = () => {
@@ -92,6 +106,7 @@ const Homepage = () => {
     const handleDrawerOpen = () => {
         setOpen(true);
     };
+
 
     return (
         <div className={classes.root}>
@@ -133,21 +148,29 @@ const Homepage = () => {
                 </div>
                 <Divider />
                 <List>
-                    {['文章列表', '我的文章', '新增文章'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
+                    <ListItem button key={'文章列表'}>
+                        <ListItemIcon> <ListIcon /> </ListItemIcon>
+                        <ListItemText primary={'文章列表'} />
                     </ListItem>
-                    ))}
+                    <ListItem button key={'我的文章'}>
+                        <ListItemIcon> <FavoriteBorderIcon />  </ListItemIcon>
+                        <ListItemText primary={'我的文章'} />
+                    </ListItem>
+                    <ListItem button key={'新增文章'}>
+                        <ListItemIcon> <LibraryAddIcon /> </ListItemIcon>
+                        <ListItemText primary={'新增文章'} />
+                    </ListItem>
                 </List>
                 <Divider />
                 <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
+                    <ListItem button key={'註冊'}>
+                        <ListItemIcon> <GroupAddIcon /> </ListItemIcon>
+                        <ListItemText primary={'註冊'} />
                     </ListItem>
-                    ))}
+                    <ListItem button key={'登入'}>
+                        <ListItemIcon> <PeopleIcon /> </ListItemIcon>
+                        <ListItemText primary={'登入'} />
+                    </ListItem>
                 </List>
             </Drawer>
             <main
@@ -158,22 +181,18 @@ const Homepage = () => {
                 }
             >
                 <div className={classes.drawerHeader} />
-                <Typography paragraph>
-                   1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
-                   1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
-                   1111111111   2222222222222   3333333333333   4444444444444     555555555555555 
-                   文章內容放置處
-                </Typography >    
-                <Articlelist></Articlelist>
+                <Articlelist users={mockData} ></Articlelist>
+
 
             </main>
         </div>
-
-
     );
 
 }
 
+Homepage.propTypes = {
+    className: PropTypes.string
+};
 
 
 export default Homepage;
