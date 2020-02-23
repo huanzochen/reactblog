@@ -5,11 +5,18 @@ class EggController extends Controller {
         const { ctx } = this;
         //ctx.body = `body: ${JSON.stringify(ctx.request.body)}`;
 
-        const islogin = await this.ctx.service.member.validate();
+        const isLogin = await this.ctx.service.member.validate();
+        ctx.body = isLogin;
     };
     async islogin() {
         const { ctx } = this;
-        const islogin = await this.ctx.service.member.validate();
+        const isLogin = await this.ctx.service.member.authenticated();
+        ctx.body = isLogin;
+    }
+    async logout() {
+        const { ctx } = this;
+        const isLogout = await this.ctx.service.member.logout();
+        ctx.body = isLogout;
     }
 }
 

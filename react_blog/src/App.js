@@ -61,7 +61,7 @@ const routes = [
       breadcrumbName: 'Dashboard'
     },
     {
-      path: '/Signin',
+      path: '/signin',
       component: Signin,
       exact: true,
       breadcrumbName: 'Signin'
