@@ -15,6 +15,7 @@ module.exports = app => {
     router.get('/api/login/islogin', controller.login.islogin)
     // 登出
     router.get('/api/login/logout', controller.login.logout)
+    router.post('/api/login/register', controller.login.register)
 
     // 新增/編輯 文章
     router.post('/api/article/new', controller.blog.newArticle)

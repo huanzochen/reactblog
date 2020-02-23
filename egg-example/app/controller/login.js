@@ -18,6 +18,11 @@ class EggController extends Controller {
         const isLogout = await this.ctx.service.member.logout();
         ctx.body = isLogout;
     }
+    async register() {
+        const { ctx } = this;
+        const register = await this.ctx.service.member.register();
+        ctx.body = register;
+    }
 }
 
 module.exports = EggController;
