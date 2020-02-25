@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { goLogin } from '../actions'
+import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux';
 import axios from 'axios';
@@ -21,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-function Signin() {
+function Signin({ onSubmit }) {
   const [user, setUser] = React.useState(
         {
             username: '',
@@ -53,6 +55,11 @@ function Signin() {
         <form
             
             onSubmit={ event => {
+                console.log('this.state');
+                console.log(user);
+                event.preventDefault()
+                onSubmit(user)
+                /*
                 axios.post( webhookURL.url + '/api/login/login', {
                     user: {
                         username: user.username,
@@ -71,6 +78,7 @@ function Signin() {
                 })
                 console.log(user.username);
                 event.preventDefault();
+                */
             }}
             
         >
@@ -101,7 +109,7 @@ function Signin() {
                 type='button'
                 color="primary"
                 variant='outlined'
-                onclick={() => {
+                onClick={() => {
                     axios.get( webhookURL.url + '/api/login/islogin' )
                     .then(response => {
                         console.log(response);
@@ -135,7 +143,7 @@ function Signin() {
   );
 }
 /*
-const mapDispatchToProps = (dispatch, ownprops) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onSubmit: () => {
             axios.post( webhookURL.url + '/api/login/login', {
@@ -159,6 +167,26 @@ const mapDispatchToProps = (dispatch, ownprops) => {
 }
 */
 
-Signin = connect()(Signin);
+const mapStateToProps = (state, ownProps) => {
+    console.log('state')
+    console.log(state)
+    return {
+        ownProps : ownProps = state
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    console.log('mapDispatchToProps');
+    return {
+        onSubmit: (user) => {
+            dispatch(goLogin(user))
+      }
+    }
+}
+
+Signin.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+}
+
+Signin = connect(mapStateToProps, mapDispatchToProps)(Signin);
 
 export default Signin;

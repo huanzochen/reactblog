@@ -46,7 +46,7 @@ let Articlelist = ( props ) => {
         let selectedUsers;
     
         if (event.target.checked) {
-          selectedUsers = props.ownprops.postByArticle.articlelist.items.map(article => article.id);
+          selectedUsers = props.ownProps.postByArticle.articlelist.items.map(article => article.id);
         } else {
           selectedUsers = [];
         }
@@ -93,7 +93,7 @@ let Articlelist = ( props ) => {
                     console.log("tpe");
                     console.log(input.value);
                     console.log("this.props");
-                    console.log(props.ownprops.postByArticle.articlelist.items[0].content);
+                    console.log(props.ownProps.postByArticle.articlelist.items[0].content);
                 }
                 input.value = ''
             }}
@@ -118,11 +118,11 @@ let Articlelist = ( props ) => {
                     <TableRow>
                     <TableCell padding="checkbox">
                         <Checkbox
-                        checked={selectedUsers.length === props.ownprops.postByArticle.articlelist.items.length}
+                        checked={selectedUsers.length === props.ownProps.postByArticle.articlelist.items.length}
                         color="primary"
                         indeterminate={
                             selectedUsers.length > 0 &&
-                            selectedUsers.length < props.ownprops.postByArticle.articlelist.items.length
+                            selectedUsers.length < props.ownProps.postByArticle.articlelist.items.length
                         }
                         onChange={handleSelectAll}
                         />
@@ -134,7 +134,7 @@ let Articlelist = ( props ) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.ownprops.postByArticle.articlelist.items.slice(0, rowsPerPage).map(article => (
+                    {props.ownProps.postByArticle.articlelist.items.slice(0, rowsPerPage).map(article => (
                     <TableRow
                         className={classes.tableRow}
                         hover
@@ -179,12 +179,12 @@ let Articlelist = ( props ) => {
 }
 
 
-const mapStateToProps = (state, ownprops) => {
+const mapStateToProps = (state, ownProps) => {
     return {
-      ownprops : ownprops = state
+      ownProps : ownProps = state
     }
 }
-const mapDispatchToProps = (dispatch, ownprops) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {}
 }
 

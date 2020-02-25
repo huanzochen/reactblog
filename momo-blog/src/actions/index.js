@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch'
+import axios from 'axios';
 import webhookURL from '../util/config';
 
 /*
@@ -138,4 +139,26 @@ export function fetchArticle(article) {
             dispatch(getArticleSuccess(article, json))
         })
     }
+}
+
+export function goLogin(user) {
+  console.log("ownProps");
+  console.log(user);
+  axios.post( webhookURL.url + '/api/login/login', {
+    user: {
+        username: user.username,
+        password: user.password
+    }
+  },
+  {
+      withCredentials: true
+  },
+  )
+  .then(response => {
+      console.log(response);
+  })
+  .catch(error => {
+      console.dir("登入失敗!", error);
+  })
+
 }
