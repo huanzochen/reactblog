@@ -19,3 +19,11 @@ exports.passport = {
     enable: true,
     package: 'egg-passport',
 };
+
+/**
+ * @see https://github.com/eggjs/egg-sequelize
+ */
+exports.sequelize = {
+    enable: true,
+    package: 'egg-sequelize'
+}
