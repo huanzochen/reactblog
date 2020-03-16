@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "api",
+    "password": "CHG_challenge112",
+    "database": "blog",
+    "host": "momoweb.hopto.me",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "blog",
+    "host": "localhost",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "api",
+    "password": "CHG_challenge112",
+    "database": "blog",
+    "host": "momoweb.hopto.me",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

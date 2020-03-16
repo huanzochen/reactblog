@@ -18,8 +18,11 @@
     "egg-mysql": "^3.0.0",
     "egg-passport": "^2.1.1",
     "egg-scripts": "^2.12.0",
+    "egg-sequelize": "^5.2.1",
     "egg-view-nunjucks": "^2.2.0",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5"
   },
   "devDependencies": {
     "egg-bin": "^4.14.1",

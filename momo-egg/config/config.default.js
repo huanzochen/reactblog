@@ -59,17 +59,3 @@ exports.cors = {
     allowHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
 };
-
-/**
- * The configuration of `egg-sequelize` plugin.
- * @member {Object} Config#sequelize
- * @see https://github.com/eggjs/egg-sequelize
- */
-config.sequelize = {
-    dialect: process.env.PUNWAVE_SERVICE_DB_CONNECTION,
-    host: process.env.PUNWAVE_SERVICE_DB_HOST,
-    port: process.env.PUNWAVE_SERVICE_DB_PORT,
-    database: process.env.PUNWAVE_SERVICE_DB_DATABASE,
-    username: process.env.PUNWAVE_SERVICE_DB_USERNAME,
-    password: process.env.PUNWAVE_SERVICE_DB_PASSWORD
-}
